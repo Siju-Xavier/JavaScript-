@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lab3 -- Exercise 1</title>
+</head>
+<body>
+ <h1>JavaScript Lab Exercise 1</h1>
+ <script>
+    var x = 10;
+    let y = 20;
+    const z = 30;
+   
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+ 
+
+    //B
+    let string1 = "Hello, World! ";
+    let string2 = "JavaScript is fun!";
+    str = string1.length;
+    console.log(str);
+    str3 = string1 + string2;
+    console.log(str3);
+    string3 = string2.replace("fun","awesome");
+    console.log(string3);
+
+    //C
+    let name = "Alice"
+    let age = 25
+    let greeting = `My name is ${name} and I am ${age} years old.`
+    console.log(greeting)
+    //D
+    const students = ["Alice", "Tom", "Charlie"]
+    const ages = [19, 21, 20]
+    for (let i = 0; i < students.length; i++) {
+        let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
+        console.log(studentInfo);
+ }
+
+    //E
+    const now = new Date();
+    console.log(now.toLocaleDateString("en-CA"));
+    console.log(now.toLocaleDateString("en-US"));
+    const weekDay = now.toLocaleDateString("en-CA",{weekday: "long"});
+    console.log(weekDay)
+    const month = new Date(2026);
+    
+
+
+
+ </script>
+</body>
+</html>
