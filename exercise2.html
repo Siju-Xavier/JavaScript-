@@ -12,16 +12,15 @@
            
             //Exercise 2A
             function add(num1, num2) {
-                return num1 + num2;
+                return num1 + num2
             }
             function subtract(num1, num2) {
-                return num1 - num2;
+                return num1 - num2
             }
-
-            //Exercise 2B
             console.log(add(6, 9))
             console.log(subtract(6, 9))
-            
+ 
+            //Exercise 2B            
             function add(num1, x = 5){
                 return num1 + x
             }
@@ -37,12 +36,12 @@
             console.log(multiply(6, 9))
 
             let divide = (a, b) => {
-                let total = a / b;
+                let total = a / b
                 if (b == 0) {
                     let errorMessage = "Error, divisor is 0"
-                    return errorMessage;
+                    return errorMessage
                 }
-                return total;
+                return total
             }
             
             let quotient = divide(6, 7)
@@ -50,18 +49,17 @@
 
             //Exercise 2D           
             let calculator = (num1, num2, operation) => {
-                return operation(num1, num2);
-            };
-
-            console.log(calculator(10, 5, add));
-            console.log(calculator(10, 0, divide));
-            console.log(calculator(10, 2, divide));
+                return operation(num1, num2)
+            }
+            console.log(calculator(10, 5, add))
+            console.log(calculator(10, 0, divide))
+            console.log(calculator(10, 2, divide))
 
             /* More tests for other operations in Exercise 2D, not required
-            console.log(calculator(10, 7, multiply));
-            console.log(calculator(10, 0, subtract));
-            console.log(calculator(9, 9, multiply));
-            console.log(calculator(20, 9, subtract));
+            console.log(calculator(10, 7, multiply))
+            console.log(calculator(10, 0, subtract))
+            console.log(calculator(9, 9, multiply))
+            console.log(calculator(20, 9, subtract))
             */
         </script>
     </body>
