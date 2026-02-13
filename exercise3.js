@@ -31,4 +31,4 @@ let name_ = classInfo.className
 let students = classInfo.students
 console.log(name_)
 console.log(students)
-let 
+
