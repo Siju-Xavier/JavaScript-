@@ -1,57 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Lab3 -- Exercise 1</title>
-</head>
-<body>
- <h1>JavaScript Lab Exercise 1</h1>
- <script>
-    var x = 10;
-    let y = 20;
-    const z = 30;
-   
+    <html lang="en">
 
-    console.log(x);
-    console.log(y);
-    console.log(z);
- 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab3 -- Exercise 1</title>
+    </head>
+    <body>
+        <h1>JavaScript Lab Exercise 1</h1>
+        <script>
 
-    //B
-    let string1 = "Hello, World! ";
-    let string2 = "JavaScript is fun!";
-    str = string1.length;
-    console.log(str);
-    str3 = string1 + string2;
-    console.log(str3);
-    string3 = string2.replace("fun","awesome");
-    console.log(string3);
+        //Exercise 1A
+        var x = 10;
+        let y = 20;
+        const z = 30;
+        console.log(x);
+        console.log(y);
+        console.log(z);
 
-    //C
-    let name = "Alice"
-    let age = 25
-    let greeting = `My name is ${name} and I am ${age} years old.`
-    console.log(greeting)
-    //D
-    const students = ["Alice", "Tom", "Charlie"]
-    const ages = [19, 21, 20]
-    for (let i = 0; i < students.length; i++) {
-        let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
-        console.log(studentInfo);
- }
+        //Exercise 1B        
+        let string1 = "Hello, World!"
+        let string2 = "JavaScript is fun!"
+        console.log(string1.length);
 
-    //E
-    const now = new Date();
-    console.log(now.toLocaleDateString("en-CA"));
-    console.log(now.toLocaleDateString("en-US"));
-    const weekDay = now.toLocaleDateString("en-CA",{weekday: "long"});
-    console.log(weekDay)
-    const month = new Date(2026);
+        let concatenated = string1.concat(string2);
+        console.log(concatenated);
+
+        let string3 = string2.replace("fun", "awesome");
+        console.log(string3);
+
+        //Exercise 1C        
+        let name = "Alice"
+        let age = 25
+        let greet = `My name is ${name} and I am ${age} years old`
+        console.log(greet);
+
+        //Exercise 1D        
+        const students = ["Alice", "Tom", "Charlie"]
+        const ages = [19, 21, 20]
+        for (let i = 0; i < students.length; i++) {
+            let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
+            console.log(studentInfo);
+        }
+
+        //Exercise 1E       
+        const now = new Date();
+        console.log(now.toLocaleDateString("en-CA"))
+        console.log(now.toLocaleDateString("en-US"))
+        const year = now.getFullYear()
+        console.log(year)
+        const month = now.getMonth()
+        console.log(month)
+        const weekDay = now.toLocaleDateString("en-CA", {weekday: "long"})
+        console.log(weekDay)
+
+        let season;
+
+        if (month == 11 || month == 0 || month == 1) {
+            season = "Winter";
+        } 
+        else if (month == 2 || month == 3 || month == 4) {
+            season = "Spring";
+        } 
+        else if (month == 5 || month == 6 || month == 7) {
+            season = "Summer";
+        } 
+        else if (month == 8 || month == 9 || month == 10) {
+            season = "Fall";
+        }
+
+        console.log(season);
+
+        </script>
+    </body>
     
-
-
-
- </script>
-</body>
-</html>
+    </html>
