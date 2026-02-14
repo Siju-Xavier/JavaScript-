@@ -26,9 +26,13 @@ console.log(classInfo.className)
 console.log(classInfo.instructor)
 console.log(classInfo.students)
 console.log(classInfo.details.semester)
-
-let name_ = classInfo.className
-let students = classInfo.students
-console.log(name_)
+let { className, students} = classInfo;
+console.log(className)
 console.log(students)
-
+let { details: { semester, year}} = classInfo
+console.log(semester)
+console.log(year)
+let [student1, student2,...remainingStudents] = classRoster
+console.log(student1)
+console.log(student2)
+console.log(remainingStudents)
