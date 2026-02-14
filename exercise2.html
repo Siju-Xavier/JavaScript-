@@ -1,67 +1,66 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lab3 -- Exercise 2</title>
+</head>
+<body>
+ <h1>JavaScript Lab Exercise 2</h1>
+ <script>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lab3 -- Exercise 2</title>
-    </head>
-    <body>
-        <h1>JavaScript Lab Exercise 2</h1>
-        <script>
-           
-            //Exercise 2A
-            function add(num1, num2) {
-                return num1 + num2
-            }
-            function subtract(num1, num2) {
-                return num1 - num2
-            }
-            console.log(add(6, 9))
-            console.log(subtract(6, 9))
- 
-            //Exercise 2B            
-            function add(num1, x = 5){
-                return num1 + x
-            }
-            console.log(add(2))
+    //Exercise A
+    /*
+    function add(num1, num2){
+        return num1 + num2
+    }
+    console.log(add(5,3))
+    function subtract(num1, num2){
+        return num1 - num2
+    }
+    console.log(subtract(5,3))
+    */
 
-            function subtract(num1, x = 5){
-                return num1 - x 
-            }
-            console.log(subtract(7))
+    //Exercise B
+    /*
+    function add(num1, x = 5){
+        return num1 + x
+    }
+    console.log(add(2))
 
-            //Exercise 2C
-            let multiply = (x, y) => x * y;
-            console.log(multiply(6, 9))
+    function subtract(num1, x= 5){
+        return num1 - x 
+    }
+    console.log(subtract(7))
+    */
 
-            let divide = (a, b) => {
-                let total = a / b
-                if (b == 0) {
-                    let errorMessage = "Error, divisor is 0"
-                    return errorMessage
-                }
-                return total
-            }
-            
-            let quotient = divide(6, 7)
-            console.log(`${quotient}`)
+    //Exercise C
+    let add = (num1, num2) => num1 + num2;
+    let subtract = (num1, num2 ) => num1 - num2;
+    let multiply = (num1, num2) => num1 * num2;
+    let divide = (num1 , num2) => {
+        if (num2 == 0){
+           return console.log("Error: cannot divide by zero");
+        }
+        return num1/num2;
+    }
 
-            //Exercise 2D           
-            let calculator = (num1, num2, operation) => {
-                return operation(num1, num2)
-            }
-            console.log(calculator(10, 5, add))
-            console.log(calculator(10, 0, divide))
-            console.log(calculator(10, 2, divide))
+    console.log(add(10,5))
+    console.log(subtract(10,5))
+    console.log(multiply(10,5))
+    console.log(divide(10,0))
+    console.log(divide(10,5))
+   
+    //Exercise D
+    function calculator(num1, num2, op){
+        return op(num1 , num2)
+    }
+    console.log(calculator(10,5,add));
+    console.log(calculator(10,5,subtract));
+    console.log(calculator(10,5,multiply));
+    console.log(calculator(10,5,divide));
 
-            /* More tests for other operations in Exercise 2D, not required
-            console.log(calculator(10, 7, multiply))
-            console.log(calculator(10, 0, subtract))
-            console.log(calculator(9, 9, multiply))
-            console.log(calculator(20, 9, subtract))
-            */
-        </script>
-    </body>
-    
-    </html>
+
+ </script>
+</body>
+</html>
